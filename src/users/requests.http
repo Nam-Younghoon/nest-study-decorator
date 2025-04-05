@@ -4,9 +4,35 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-  "email": "test@test.com",
+  "email": "test3@test3.com",
   "password": "1234"
 }
+
+### sign-in
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+  "email": "test5@test5.com",
+  "password": "12345"
+}
+
+### sign-up
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "email": "test5@test5.com",
+  "password": "12345"
+}
+
+### who-am-i?
+GET http://localhost:3000/auth/whoami
+Content-Type: application/json
+
+### Sign-out
+POST http://localhost:3000/auth/signout
+
 
 ### Find a particular user with a given ID
 GET http://localhost:3000/auth/3
@@ -25,3 +51,9 @@ Content-Type: application/json
 {
   "email": "test2@test2.com"
 }
+
+### Set a color to session
+GET http://localhost:3000/auth/colors/red
+
+###Get the color from session
+GET http://localhost:3000/auth/colors
